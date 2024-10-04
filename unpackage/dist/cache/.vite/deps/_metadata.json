@@ -1,0 +1,31 @@
+{
+  "hash": "64a5c91f",
+  "configHash": "18d1a190",
+  "lockfileHash": "c0f1d9c0",
+  "browserHash": "ec10c06d",
+  "optimized": {
+    "chinese-lunar": {
+      "src": "../../../../../node_modules/chinese-lunar/lib/chinese-lunar.js",
+      "file": "chinese-lunar.js",
+      "fileHash": "80a68776",
+      "needsInterop": true
+    },
+    "chinese-lunar-calendar": {
+      "src": "../../../../../node_modules/chinese-lunar-calendar/src/lunar_calendar.js",
+      "file": "chinese-lunar-calendar.js",
+      "fileHash": "366208ce",
+      "needsInterop": true
+    },
+    "solarlunar-es": {
+      "src": "../../../../../node_modules/solarlunar-es/dist/solarlunar.esm.js",
+      "file": "solarlunar-es.js",
+      "fileHash": "fc1f2c48",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-Y2F7D3TJ": {
+      "file": "chunk-Y2F7D3TJ.js"
+    }
+  }
+}

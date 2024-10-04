@@ -1,0 +1,151 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: "HldFont";
+  /* 自定义字体的名称 */
+  src: url("../../assets/黄令东齐伋复刻（Combo）.dd8ba1e7.ttf") format("truetype");
+  /* 字体文件的路径 */
+}
+.layout.data-v-b7a0a06d {
+  font-family: "HldFont", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列子元素 */
+  justify-content: space-between;
+  /* 在容器内分布空间，确保.lunar在底部 */
+  width: 750rpx;
+  position: relative;
+  /* 下拉图片区域 */
+  /* 上拉图片区域 */
+}
+.layout .suitable.data-v-b7a0a06d {
+  font-size: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layout .suitable .isSuitable.data-v-b7a0a06d, .layout .suitable .isNSuitable.data-v-b7a0a06d {
+  width: 150rpx;
+  /* 宽度和高度相同，确保是个正方形 */
+  height: 150rpx;
+  border-radius: 50%;
+  /* 圆形 */
+  margin: 0 auto;
+  /* 如果需要将圆形居中，可以使用 auto margin */
+  color: #FFF;
+}
+.layout .suitable .isSuitable.data-v-b7a0a06d {
+  background-color: red;
+  /* 背景色可以根据需要调整 */
+}
+.layout .suitable .isNSuitable.data-v-b7a0a06d {
+  background-color: black;
+  /* 背景色可以根据需要调整 */
+}
+.layout .viewPhoto.data-v-b7a0a06d {
+  display: flex;
+  justify-content: space-between;
+  /* 子元素之间留空，一个居左，一个居右 */
+  align-items: center;
+  /* 如果需要垂直居中对齐，可以使用这个属性 */
+}
+.layout .viewPhoto .left.data-v-b7a0a06d {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+.layout .viewPhoto .left .image.data-v-b7a0a06d {
+  width: 100%;
+  height: 100%;
+}
+.layout .viewPhoto .left swiper.data-v-b7a0a06d {
+  height: 100%;
+}
+.layout .viewPhoto .left swiper-item.data-v-b7a0a06d {
+  height: 100%;
+  font-size: 30rpx;
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.layout .viewPhoto .right.data-v-b7a0a06d {
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  /* 将文字垂直排列，从右到左 */
+  text-orientation: upright;
+  /* 确保文字保持正向直立显示 */
+  margin-right: 105rpx;
+}
+.layout .viewPhoto .right .pingyin.data-v-b7a0a06d {
+  font-size: 56rpx;
+  margin-top: 20rpx;
+  color: #c4ada7;
+}
+.layout .viewPhoto .right .color.data-v-b7a0a06d {
+  font-size: 112rpx;
+  margin-right: 30rpx;
+}
+.layout .lunar.data-v-b7a0a06d {
+  width: 750rpx;
+  height: 200rpx;
+  text-align: right;
+  /* 将文字靠右对齐 */
+}
+.layout .lunar .date.data-v-b7a0a06d {
+  font-size: 56rpx;
+  padding-right: 50rpx;
+  /* 添加右边的间距 */
+}
+.layout .lunar .year.data-v-b7a0a06d {
+  font-size: 56rpx;
+  padding-right: 50rpx;
+  /* 添加右边的间距 */
+}
+.layout .lunar .monthday.data-v-b7a0a06d {
+  font-size: 31rpx;
+  padding-right: 50rpx;
+  /* 添加右边的间距 */
+}
+.layout .dropdown-indicator.data-v-b7a0a06d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100rpx;
+}
+.layout .dropdown-indicator .dropdown-image.data-v-b7a0a06d {
+  width: 50rpx;
+  height: 50rpx;
+}
+.layout .dropup-indicator.data-v-b7a0a06d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layout .dropup-indicator .dropup-image.data-v-b7a0a06d {
+  width: 50rpx;
+  height: 50rpx;
+}

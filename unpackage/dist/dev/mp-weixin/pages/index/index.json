@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "suitable-item": "../../components/suitable-item/suitable-item"
+  }
+}

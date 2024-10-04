@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "chinese-lunar": "^0.1.4",
+    "chinese-lunar-calendar": "^1.0.1",
+    "solarlunar-es": "^1.0.9"
+  }
+}
