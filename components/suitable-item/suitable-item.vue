@@ -1,18 +1,16 @@
 <template>
-	<view class="layout" :style="{ backgroundColor: bgColor }">
+	<view class="layout" :style="{ backgroundColor: pageBgColor }">
 		
 		<!-- 上拉图片区域 -->
 		<view class="dropup-indicator"  >
 		  <image v-if="!isSuitable" src="../../static/上拉.png" mode="aspectFit" class="dropup-image"></image>
 		</view>
 		
-		<view class="suitable">
-			<view class="isSuitable" v-if="isSuitable">
-				宜
-			</view>
-			<view class="isNSuitable" v-if="!isSuitable">
-				忌
-			</view>
+		<view class="isSuitable" v-if="isSuitable">
+			宜
+		</view>
+		<view class="isNSuitable" v-if="!isSuitable">
+			忌
 		</view>
 
 		<view class="viewPhoto">
@@ -23,13 +21,12 @@
 					</swiper-item>
 				</swiper>
 			</view>
+			<view class="center">
+				 {{colorName}}
+			</view>
 			<view class="right">
-				<view class="pingyin">
-					 {{pingyin}}
-				</view>
-				<view class="color">
-				   {{color}}
-				</view>
+				<!-- -->
+				<view class="colorBall" v-for="(item,index) in bgColor" :key="index"  :style="{backgroundColor: item}"  @click="handleClick(index)" ></view>
 			</view>
 		</view>
 		<view class="lunar">
@@ -49,19 +46,22 @@
 
 <script setup>
 import { ref } from 'vue';
+
+const pageBgColor = ref("")
+const colorName = ref("")
 	
-defineProps({
+const props = defineProps({
 	isSuitable:{
 		type:Boolean,
 		default:false
 	},
 	bgColor:{
-		type:String,
-		default:"#FFF"
+		type:Array,
+		default:['#F9F4DC','#EF6F48','#B0D5DF']
 	},
 	color:{
-		type:String,
-		default:"無顔色"
+		type:Array,
+		default:['杏仁黃','草莓红','湖水蓝']
 	},
 	pingyin:{
 		type:String,
@@ -86,6 +86,14 @@ defineProps({
 	}
 })
 
+pageBgColor.value = props.bgColor[0]
+colorName.value = props.color[0]
+
+function handleClick(index) {
+  
+  pageBgColor.value = props.bgColor[index]
+  colorName.value = props.color[index]
+}
 
 
 </script>
@@ -104,39 +112,36 @@ defineProps({
 	    // height: 100vh; /* 100% 的视口高度 */
 		width: 750rpx;
 		position: relative;
-		.suitable{
+
+		.isSuitable,.isNSuitable{
 			font-size: 150rpx;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			
-			.isSuitable,.isNSuitable{
-				width: 150rpx;  /* 宽度和高度相同，确保是个正方形 */
-				height: 150rpx;
-				border-radius: 50%; /* 圆形 */
-				// border: 10rpx solid #000; /* 给圆形添加边框 */
-				margin: 0 auto; /* 如果需要将圆形居中，可以使用 auto margin */
-				color: #FFF;
-				// margin-top: 50rpx;
-			}
-			
-			.isSuitable{
-                // margin-top: 50rpx;
-				background-color: red; /* 背景色可以根据需要调整 */
-			
-			}
-			.isNSuitable{
-                // margin-top: -100rpx;
-				background-color: black; /* 背景色可以根据需要调整 */
+			// margin-top: -100rpx;
+			width: 150rpx;  /* 宽度和高度相同，确保是个正方形 */
+			height: 150rpx;
+			border-radius: 50%; /* 圆形 */
+			// border: 10rpx solid #000; /* 给圆形添加边框 */
+		    margin: 0 auto; /* 如果需要将圆形居中，可以使用 auto margin */
+			color: #FFF;
+			// display: flex;
+			// align-items: center;
+			// justify-content: center;
+			// text-align: center; // 新增的样式，确保文本居中
+			line-height: 150rpx; // 新增的样式，用于确保在正方形中垂直居中
+		}
 		
-			}
-		    
+		.isSuitable{
+			background-color: red; /* 背景色可以根据需要调整 */
+		
+		}
+		.isNSuitable{
+			background-color: black; /* 背景色可以根据需要调整 */
+				
 		}
 		.viewPhoto{
-			
 			display: flex;
 			justify-content: space-between; /* 子元素之间留空，一个居左，一个居右 */
 			align-items: center; /* 如果需要垂直居中对齐，可以使用这个属性 */
+			height: 770rpx;
 			.left{
 				width: 100%;;
 				height: 100%;
@@ -158,27 +163,31 @@ defineProps({
 				}
 			}
 				
-			.right{
+			.center{
+				font-size: 112rpx;
+				margin-right: 50rpx;
 				writing-mode: vertical-rl; /* 将文字垂直排列，从右到左 */
 				text-orientation: upright; /* 确保文字保持正向直立显示 */
-				margin-right: 105rpx;
-				.pingyin{
-					font-size: 56rpx;
-					margin-top: 20rpx;
-					color: #c4ada7;
+			}
+			.right{
+				margin-right: 100rpx;
+				.colorBall{
+					width: 66rpx;  /* 宽度和高度相同，确保是个正方形 */
+					height: 66rpx;
+					border-radius: 50%; /* 圆形 */
+					border: 5rpx solid #000; /* 给圆形添加边框 */
+					margin: 90rpx 0rpx;
 					
 				}
-				.color{
-					font-size: 112rpx;
-					margin-right: 30rpx;
-					
-				}
+				
 			}
 			
 		}
 	    .lunar{
 			width: 750rpx;
 			height: 200rpx;
+			
+			margin-bottom: -150rpx;
 			
 			text-align: right; /* 将文字靠右对齐 */
 			.date{
@@ -202,7 +211,7 @@ defineProps({
 		  display: flex;
 		  justify-content: center;
 		  align-items: center;
-		  margin-bottom: 100rpx;
+		  margin-bottom: 50rpx;
 		  
 		  .dropdown-image {
 		    width: 50rpx;
@@ -215,6 +224,7 @@ defineProps({
 		  display: flex;
 		  justify-content: center;
 		  align-items: center;
+		  margin-top: 50rpx;
 		  
 		  .dropup-image {
 		    width: 50rpx;

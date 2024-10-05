@@ -3,21 +3,22 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path" : "pages/isSuitable/isSuitable",
 			"style" : 
 			{
-				"navigationBarTitleText" : "isSuitable"
+				
 			}
 		},
 		{
 			"path" : "pages/isNSuitable/isNSuitable",
 			"style" : 
 			{
-				"navigationBarTitleText" : "isNSuitable"
+				
 			}
 		}
 	],

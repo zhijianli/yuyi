@@ -3,7 +3,7 @@
 	   <!-- v-for="item in arrayList" -->
 		<swiper  @change="swiperChange" circular class="swiper" vertical>
 			<swiper-item v-for="(item, index) in items" :key="index">
-				<suitable-item :isSuitable="item.isSuitable" :bgColor="item.bgColor" :color="item.color" :imageArray="item.imageArray" :pingyin="item.pingyin" :lunar="lunar"></suitable-item>
+				<suitable-item :isSuitable="item.isSuitable" :bgColor="item.bgColor" :color="item.color" :imageArray="item.imageArray"  :lunar="lunar"></suitable-item>
 			</swiper-item>
 		</swiper>
    </view>
@@ -37,42 +37,35 @@
 	
 	const items = ref([{
 		isSuitable:true,
-		bgColor:'#F9F4DC',
-		color:'杏仁黃',
+		bgColor:['#F9F4DC','#EF6F48','#B0D5DF'],
+		color:['杏仁黃','草莓红','湖水蓝'],
 		pingyin:'Xingrenhuang',
 		imageArray:['女装2.jpg','女装4.jpg','女装6.jpg']
 	},
 	{
 		isSuitable:false,
-		bgColor:'#503E2A',
-		color:'橄榄灰',
+		bgColor:['#503E2A','#55BB8A','#4C1F24'],
+		color:['橄榄灰','麦苗绿','葡萄紫'],
 		pingyin:'Ganlanhui',
 		imageArray:['女装8.jpg','女装10.jpg','女装12.jpg']
 	}]);
 
-	const swiperChange = (event) => {
-		const currentIndex = event.detail.current; // 获取当前滑块的索引
-		const currentBgColor = items.value[currentIndex].bgColor; // 根据索引获取 bgColor
-		console.log('当前背景颜色:', currentBgColor);
+	// const swiperChange = (event) => {
+	// 	const currentIndex = event.detail.current; // 获取当前滑块的索引
+	// 	const currentBgColor = items.value[currentIndex].bgColor; // 根据索引获取 bgColor
+	// 	console.log('当前背景颜色:', currentBgColor);
 
-	    // 使用 setTimeout 来延迟导航栏颜色切换
-	    setTimeout(() => {
-		  uni.setNavigationBarColor({	    
-			backgroundColor: currentBgColor,  // 设置背景颜色
-		    animation: {
-			  duration: 300,  // 动画时间
-			  timingFunc: 'easeIn'
-		    }
-		  });
-	    }, 300); // 延迟300毫秒，确保滑块切换动画完成后再改变颜色
-	}
-	
-	
-	onLoad((e)=>{	
-
-
-      
-    })
+	//     // 使用 setTimeout 来延迟导航栏颜色切换
+	//     setTimeout(() => {
+	// 	  uni.setNavigationBarColor({	    
+	// 		backgroundColor: currentBgColor,  // 设置背景颜色
+	// 	    animation: {
+	// 		  duration: 300,  // 动画时间
+	// 		  timingFunc: 'easeIn'
+	// 	    }
+	// 	  });
+	//     }, 300); // 延迟300毫秒，确保滑块切换动画完成后再改变颜色
+	// }
 
 </script>
 
