@@ -16,7 +16,7 @@
 		<view class="viewPhoto">
 			<view class="left">
 				<swiper  autoplay interval="3000" duration="300" circular>
-					<swiper-item v-for="item in imageArray">
+					<swiper-item v-for="item in clothesArray">
 					    <image :src="`../../common/images/${item}`" mode="aspectFit" class="image"></image>
 					</swiper-item>
 				</swiper>
@@ -49,6 +49,7 @@ import { ref } from 'vue';
 
 const pageBgColor = ref("")
 const colorName = ref("")
+const clothesArray = ref([])
 	
 const props = defineProps({
 	isSuitable:{
@@ -70,7 +71,7 @@ const props = defineProps({
 	imageArray: {  // 定义一个数组类型的属性
 	    type: Array,
 	    default() {
-	      return ["女装2.jpg","女装4.jpg","女装6.jpg"];
+	      return [['女装2.jpg','女装4.jpg','女装6.jpg'],['女装8.jpg','女装10.jpg','女装12.jpg'],['女装8.jpg','女装10.jpg','女装12.jpg']];
 	    }
 	},
 	lunar:{
@@ -84,15 +85,18 @@ const props = defineProps({
 		  }
 		}
 	}
+	
 })
 
 pageBgColor.value = props.bgColor[0]
 colorName.value = props.color[0]
+clothesArray.value = props.imageArray[0]
 
 function handleClick(index) {
   
   pageBgColor.value = props.bgColor[index]
   colorName.value = props.color[index]
+  clothesArray.value = props.imageArray[index]
 }
 
 

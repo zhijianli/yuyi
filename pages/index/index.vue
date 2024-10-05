@@ -37,17 +37,17 @@
 	
 	const items = ref([{
 		isSuitable:true,
-		bgColor:['#F9F4DC','#EF6F48','#B0D5DF'],
-		color:['杏仁黃','草莓红','湖水蓝'],
+		bgColor:['#F9F4DC','#55BB8A','#B0D5DF'],
+		color:['杏仁黃','麦苗绿','湖水蓝'],
 		pingyin:'Xingrenhuang',
-		imageArray:['女装2.jpg','女装4.jpg','女装6.jpg']
+		imageArray:[['杏仁黄2.jpg','杏仁黄4.jpg','杏仁黄6.jpg'],['麦苗绿2.jpg','麦苗绿4.jpg','麦苗绿6.jpg'],['湖水蓝1.jpg','湖水蓝2.jpg','湖水蓝3.jpg']]
 	},
 	{
 		isSuitable:false,
-		bgColor:['#503E2A','#55BB8A','#4C1F24'],
-		color:['橄榄灰','麦苗绿','葡萄紫'],
+		bgColor:['#E4DFD7','#D42517','#FFFEF8'],
+		color:['珍珠灰','鹤顶红','象牙白'],
 		pingyin:'Ganlanhui',
-		imageArray:['女装8.jpg','女装10.jpg','女装12.jpg']
+		imageArray:[['珍珠灰1.jpg','珍珠灰2.jpg','珍珠灰3.jpg'],['鹤顶红1.jpg','鹤顶红2.jpg','鹤顶红3.jpg'],['象牙白1.jpg','象牙白2.jpg','象牙白3.jpg']]
 	}]);
 
 	// const swiperChange = (event) => {
