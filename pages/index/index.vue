@@ -26,7 +26,7 @@
 	let lunarYear = solar2lunarData.gzYear+solar2lunarData.animal+"年"
 	let lunarMonth = solar2lunarData.gzMonth+"月"
 	let lunarDay = solar2lunarData.gzDay+"日"
-	// console.log(lunarStr+lunarYear+lunarMonth+lunarDay)
+	console.log(lunarStr+lunarYear+lunarMonth+lunarDay)
 	
 	const lunar = ref({
 		lunarStr,
@@ -36,14 +36,19 @@
 	});
 	
 	const items = ref([{
-		isSuitable:true,
+		isSuitable:'吉',
 		bgColor:['#F9F4DC','#55BB8A','#B0D5DF'],
 		color:['杏仁黃','麦苗绿','湖水蓝'],
 		pingyin:'Xingrenhuang',
 		imageArray:[['杏仁黄2.jpg','杏仁黄4.jpg','杏仁黄6.jpg'],['麦苗绿2.jpg','麦苗绿4.jpg','麦苗绿6.jpg'],['湖水蓝1.jpg','湖水蓝2.jpg','湖水蓝3.jpg']]
-	},
-	{
-		isSuitable:false,
+	},{
+		isSuitable:'次吉',
+		bgColor:['#3D3B4F','#177CB0'],
+		color:['玄色','青色'],
+		pingyin:'Xingrenhuang',
+		imageArray:[['玄色1.jpg','玄色2.jpg','玄色3.jpg'],['青色1.jpg','青色2.jpg','青色3.jpg']]
+	},{
+		isSuitable:'忌',
 		bgColor:['#E4DFD7','#D42517','#FFFEF8'],
 		color:['珍珠灰','鹤顶红','象牙白'],
 		pingyin:'Ganlanhui',

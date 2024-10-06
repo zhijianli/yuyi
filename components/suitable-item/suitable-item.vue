@@ -3,14 +3,17 @@
 		
 		<!-- 上拉图片区域 -->
 		<view class="dropup-indicator"  >
-		  <image v-if="!isSuitable" src="../../static/上拉.png" mode="aspectFit" class="dropup-image"></image>
+		  <image v-if="isSuitable === '忌'" src="../../static/上拉.png" mode="aspectFit" class="dropup-image"></image>
 		</view>
 		
-		<view class="isSuitable" v-if="isSuitable">
-			宜
+		<view class="isSuitable" v-if="isSuitable === '吉'">
+			吉
 		</view>
-		<view class="isNSuitable" v-if="!isSuitable">
+		<view class="isNSuitable" v-if="isSuitable === '忌'">
 			忌
+		</view>
+		<view class="isCSuitable" v-if="isSuitable === '次吉'">
+			次吉
 		</view>
 
 		<view class="viewPhoto">
@@ -38,7 +41,7 @@
 		
 		<!-- 下拉图片区域 -->
 		<view class="dropdown-indicator"  >
-		  <image v-if="isSuitable" src="../../static/下拉.png" mode="aspectFit" class="dropdown-image"></image>
+		  <image v-if="isSuitable === '吉' || isSuitable === '次吉'" src="../../static/下拉.png" mode="aspectFit" class="dropdown-image"></image>
 		</view>
 		
 	</view>
@@ -50,11 +53,12 @@ import { ref } from 'vue';
 const pageBgColor = ref("")
 const colorName = ref("")
 const clothesArray = ref([])
+const isSuitable = ref("")
 	
 const props = defineProps({
 	isSuitable:{
-		type:Boolean,
-		default:false
+		type:String,
+		default:'吉'
 	},
 	bgColor:{
 		type:Array,
@@ -91,6 +95,7 @@ const props = defineProps({
 pageBgColor.value = props.bgColor[0]
 colorName.value = props.color[0]
 clothesArray.value = props.imageArray[0]
+isSuitable.value = props.isSuitable
 
 function handleClick(index) {
   
@@ -138,8 +143,17 @@ function handleClick(index) {
 		
 		}
 		.isNSuitable{
-			background-color: black; /* 背景色可以根据需要调整 */
-				
+			background-color: black; /* 背景色可以根据需要调整 */	
+		}
+		.isCSuitable{
+			font-size: 75rpx;
+			width: 150rpx;  /* 宽度和高度相同，确保是个正方形 */
+			height: 150rpx;
+			border-radius: 50%; /* 圆形 */
+			margin: 0 auto; /* 如果需要将圆形居中，可以使用 auto margin */
+			color: #FFF;
+			line-height: 150rpx; // 新增的样式，用于确保在正方形中垂直居中
+			background-color: #894E54;
 		}
 		.viewPhoto{
 			display: flex;
