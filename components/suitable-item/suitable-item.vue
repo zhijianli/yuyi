@@ -146,7 +146,7 @@ function handleClick(index) {
 			background-color: black; /* 背景色可以根据需要调整 */	
 		}
 		.isCSuitable{
-			font-size: 75rpx;
+			font-size: 85rpx;
 			width: 150rpx;  /* 宽度和高度相同，确保是个正方形 */
 			height: 150rpx;
 			border-radius: 50%; /* 圆形 */
