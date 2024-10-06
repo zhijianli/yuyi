@@ -20,7 +20,7 @@
 			<view class="left">
 				<swiper  autoplay interval="3000" duration="300" circular>
 					<swiper-item v-for="item in clothesArray">
-					    <image :src="`../../static/images/${item}`" mode="aspectFit" class="image"></image>
+					    <image :src="`https://chuanda-yuyi.oss-cn-hangzhou.aliyuncs.com/${item}`" mode="aspectFit" class="image"></image>
 					</swiper-item>
 				</swiper>
 			</view>
@@ -110,7 +110,7 @@ function handleClick(index) {
 <style lang="scss" scoped>
 	@font-face {
 	  font-family: 'HldFont'; /* 自定义字体的名称 */
-	  src: url('@/common/fonts/黄令东齐伋复刻（Combo）.ttf') format('truetype'); /* 字体文件的路径 */
+	  src: url('@/static/fonts/黄令东齐伋复刻（Combo）.ttf') format('truetype'); /* 字体文件的路径 */
 	}
      
 	.layout{

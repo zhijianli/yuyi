@@ -1,5 +1,5 @@
 <template>
-   <view class="layout">
+   <view  class="layout">
 	   <!-- v-for="item in arrayList" -->
 		<swiper  @change="swiperChange" circular class="swiper" vertical>
 			<swiper-item v-for="(item, index) in items" :key="index">
@@ -75,13 +75,25 @@
 </script>
 
 <style lang="scss" scoped>
-  .layout{
+	
+	page {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+   .layout{
+
 	  width: 750rpx;
 	  height: 100vh;
 	  
 	  .swiper{
+  
 		  width: 100%;
 		  height: 100%;
 	  }
-  }
+   }
+
 </style>
+
+

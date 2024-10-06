@@ -6,20 +6,6 @@
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
-		},
-		{
-			"path" : "pages/isSuitable/isSuitable",
-			"style" : 
-			{
-				
-			}
-		},
-		{
-			"path" : "pages/isNSuitable/isNSuitable",
-			"style" : 
-			{
-				
-			}
 		}
 	],
 	"globalStyle": {

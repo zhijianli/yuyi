@@ -13,5 +13,9 @@
 </script>
 
 <style>
-	/*每个页面公共css */
+  .uni-page-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
