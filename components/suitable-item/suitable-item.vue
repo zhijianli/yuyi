@@ -103,14 +103,24 @@ function handleClick(index) {
   colorName.value = props.color[index]
   clothesArray.value = props.imageArray[index]
 }
-
+// uni.loadFontFace({
+//   global: true, // 开启全局生效
+//    family: 'PingFang SC',
+//    source: 'url("https://chuanda-yuyi.oss-cn-hangzhou.aliyuncs.com/%E9%BB%84%E4%BB%A4%E4%B8%9C%E9%BD%90%E4%BC%8B%E5%A4%8D%E5%88%BB%EF%BC%88Combo%EF%BC%89-%E5%8E%8B%E7%BC%A9.ttf")',
+//    success() {
+//      console.log('success')
+//    },
+//    fail(e) {
+//      console.log('err：',e)
+//    }
+//  })
 
 </script>
 
 <style lang="scss" scoped>
 	@font-face {
 	  font-family: 'HldFont'; /* 自定义字体的名称 */
-	  src: url('@/static/fonts/黄令东齐伋复刻（Combo）-压缩.ttf') format('truetype'); /* 字体文件的路径 */
+	  src: url('https://chuanda-yuyi.oss-cn-hangzhou.aliyuncs.com/%E9%BB%84%E4%BB%A4%E4%B8%9C%E9%BD%90%E4%BC%8B%E5%A4%8D%E5%88%BB%EF%BC%88Combo%EF%BC%89-%E5%8E%8B%E7%BC%A9.ttf') format('truetype'); /* 字体文件的路径 */
 	}
      
 	.layout{

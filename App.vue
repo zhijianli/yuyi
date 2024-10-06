@@ -13,9 +13,5 @@
 </script>
 
 <style>
-  .uni-page-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
 </style>
