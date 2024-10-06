@@ -33,7 +33,8 @@
     
     你现在是一个擅长阴阳五行的算命先生，今天的农历日期是：农历二零二四年九月初四日甲辰龙年癸酉月癸卯日，你告诉我今天适合穿戴的颜色，普通穿戴的颜色，和不适合穿戴的颜色（颜色名需要是中国古代的颜色名，同时告诉我颜色代码和颜色的英文翻译），并告诉我理由。
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8d352fea-fa40-4484-b40c-91389632e156/1e1b9738-d868-4a8b-8d3a-28960bce33e9/image.png)
+     ![image](https://github.com/user-attachments/assets/ccd4d25a-f323-4794-998c-fd392be814a2)
+
     
 - 第三步：调用一下绘画大模型，生成相应颜色女装！！！
     
@@ -49,7 +50,8 @@
     
     (NSFW:1.3),teeth,(cleavage),(worst quality:1.65),(low quality:1.2),(normal quality:1.2),low resolution,watermark,dark spots,blemishes,dull eyes,wrong teeth,red teeth,bad tooth,Multiple people,broken eyelashes,(badhandv4-AnimeIllustDiffusion_badhandv4:1.2),(EasyNegative:1.2),
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8d352fea-fa40-4484-b40c-91389632e156/6b46fa3d-45f0-4daf-b93a-47edd9548a7b/image.png)
+    ![image](https://github.com/user-attachments/assets/1785c2b1-2fee-4af7-8d72-88faf129548d)
+
     
 - 第四步，调用[阿里抠图工具](https://vision.aliyun.com/experience/detail?spm=a2cvz.27718152.J_9280759530.10.1f917e821maLI6&tagName=imageseg&children=SegmentHDBody)，把背景扣掉
 
