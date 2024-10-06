@@ -82,6 +82,14 @@
 	  justify-content: center;
 	}
 
+	@font-face{
+		font-family: 'youshebaiotiahei';
+		src: url('./oAZOoe.eot'); 
+		src: url('./oAZOoe.eot?#iefix') format('embedded-opentype'),
+			url('./oAZOoe.woff') format('woff'), 
+			url('./优设标题黑.ttf')  format('truetype'), 
+			url('./oAZOoe.svg#PingFangSC-Regular') format('svg'); 
+	  }
    .layout{
 
 	  width: 750rpx;
