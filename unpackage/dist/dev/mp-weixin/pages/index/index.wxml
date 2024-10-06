@@ -1,1 +1,0 @@
-<view class="layout data-v-1cf27b2a"><swiper bindchange="{{b}}" circular class="swiper data-v-1cf27b2a" vertical><swiper-item wx:for="{{a}}" wx:for-item="item" wx:key="c" class="data-v-1cf27b2a"><suitable-item wx:if="{{item.b}}" class="data-v-1cf27b2a" u-i="{{item.a}}" bind:__l="__l" u-p="{{item.b}}"></suitable-item></swiper-item></swiper></view>

@@ -72,8 +72,8 @@
     "h5" : {
         "title" : "羽衣",
         "router" : {
-            "mode" : "history",
-            "base" : "/yuyi/"
+            "mode" : "hash",
+            "base" : "./"
         },
         "devServer" : {
             "https" : false

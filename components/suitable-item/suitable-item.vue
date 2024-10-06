@@ -20,7 +20,7 @@
 			<view class="left">
 				<swiper  autoplay interval="3000" duration="300" circular>
 					<swiper-item v-for="item in clothesArray">
-					    <image :src="`../../common/images/${item}`" mode="aspectFit" class="image"></image>
+					    <image :src="`../../static/images/${item}`" mode="aspectFit" class="image"></image>
 					</swiper-item>
 				</swiper>
 			</view>
