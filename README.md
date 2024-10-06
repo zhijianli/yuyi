@@ -64,3 +64,24 @@
     [中国传统颜色](https://js.design/f/aC8duf?p=5UnSvAU40y&mode=design&linkelement=xXCbGsOFb0SJaIpVou4hs)
     
     chatgpt的api不能了解什么是阴历，那就只能调用国内的api了，kimi试了一下是正确的，那就调用kimi的api试试看了，[kmi的文档](https://platform.moonshot.cn/docs/guide/start-using-kimi-api)
+
+
+- 第五步，把羽衣项目部署到服务器
+    
+    既然是静态的，那我还是部署到阿里云服务器好了。
+    
+    在/home/mocuili/github/yuyi/unpackage/dist/build/web目录下，执行命令
+    
+    python3 -m http.server 9000  （或者直接在根目录下，执行start.sh文件就行）
+    
+    [解决字体过大，前端加载太慢的问题](https://blog.csdn.net/u014289767/article/details/112002307)
+    
+    - 压缩的文字
+        
+        甲乙丙丁戊己庚辛壬癸
+        子丑寅卯辰巳午未申酉戌亥
+        鼠牛虎兔龙蛇马羊猴鸡狗猪
+        年月日初农历
+        吉忌次
+        零一二三四五六七八九
+        珍珠灰鹤顶红象牙白杏仁黄麦苗绿湖水蓝玄青色
